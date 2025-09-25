@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "SpiderMan",
+			"Path": "..\\Source\\SpiderMan.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "SpiderManEditor",
+			"Path": "..\\Source\\SpiderManEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

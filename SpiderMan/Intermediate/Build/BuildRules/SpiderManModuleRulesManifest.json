@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"F:\\SpiderManUE5\\SpiderMan\\Source\\SpiderMan\\SpiderMan.Build.cs",
+		"F:\\SpiderManUE5\\SpiderMan\\Source\\SpiderMan.Target.cs",
+		"F:\\SpiderManUE5\\SpiderMan\\Source\\SpiderManEditor.Target.cs"
+	],
+	"EngineVersion": "5.6.1"
+}

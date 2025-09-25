@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "f:\\spidermanue5\\spiderman\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\spiderman\\permoduleinline.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "f:\\spidermanue5\\spiderman\\intermediate\\build\\win64\\x64\\spidermaneditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "f:\\spidermanue5\\spiderman\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\spiderman\\definitions.spiderman.h",
+            "c:\\unreal\\ue_5.6\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
