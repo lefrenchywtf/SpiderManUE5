@@ -18,6 +18,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class ASMCharacter *************************************************************
 #define FID_SpiderMan_Source_SpiderMan_SMCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execLook); \
 	DECLARE_FUNCTION(execJumpChara); \
 	DECLARE_FUNCTION(execMoveSide); \
 	DECLARE_FUNCTION(execMoveForward);

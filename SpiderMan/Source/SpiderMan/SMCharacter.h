@@ -19,6 +19,8 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UPROPERTY(BlueprintReadWrite);
+	class UCameraComponent* CameraComponent;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -34,4 +36,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void JumpChara();
+
+	UFUNCTION(BlueprintCallable)
+	void Look(FVector2D _inputs);
 };

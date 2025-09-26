@@ -3,6 +3,7 @@
 	{
 		"Module.SpiderMan.gen.cpp.obj": [
 			"SMCharacter.gen.cpp.obj",
+			"SMController.gen.cpp.obj",
 			"SpiderMan.init.gen.cpp.obj"
 		]
 	}

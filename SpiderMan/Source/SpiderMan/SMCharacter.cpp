@@ -2,6 +2,7 @@
 
 
 #include "SMCharacter.h"
+#include "Camera/CameraComponent.h"
 
 // Sets default values
 ASMCharacter::ASMCharacter()
@@ -15,7 +16,6 @@ ASMCharacter::ASMCharacter()
 void ASMCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 // Called every frame
@@ -33,15 +33,42 @@ void ASMCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 void ASMCharacter::MoveForward(float _value)
 {
-	AddMovementInput(GetActorForwardVector(), _value);
+	if (CameraComponent)
+	{
+		// Get the forward of the camera that can never point at the ground
+		FRotator rotation = GetControlRotation();
+		rotation.Pitch = 0;
+		rotation.Roll = 0;
+		FVector forwardVector = FRotationMatrix(rotation).GetUnitAxis(EAxis::X);
+
+		AddMovementInput(forwardVector, _value);
+	}
+	else
+	{
+		AddMovementInput(GetActorForwardVector(), _value);
+	}
 }
 
 void ASMCharacter::MoveSide(float _value)
 {
-	AddMovementInput(GetActorRightVector(), _value);
+	if (CameraComponent)
+	{
+		AddMovementInput(CameraComponent->GetRightVector(), _value);
+	}
+	else
+	{
+		AddMovementInput(GetActorRightVector(), _value);
+	}
+
 }
 
 void ASMCharacter::JumpChara()
 {
 	Jump();
+}
+
+void ASMCharacter::Look(FVector2D _inputs)
+{
+	AddControllerYawInput(_inputs.X);
+	AddControllerPitchInput(_inputs.Y);
 }
