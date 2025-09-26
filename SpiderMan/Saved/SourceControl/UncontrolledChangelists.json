@@ -1,0 +1,32 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"F:/SpiderManUE5/SpiderMan/Content/Levels/TestLevel.umap",
+				"F:/SpiderManUE5/SpiderMan/Content/ThirdPerson/MI_ThirdPersonColWay.uasset",
+				"F:/SpiderManUE5/SpiderMan/Content/LevelPrototyping/Meshes/SM_ChamferCube.uasset",
+				"F:/SpiderManUE5/SpiderMan/Content/LevelPrototyping/Meshes/SM_Cylinder.uasset",
+				"F:/SpiderManUE5/SpiderMan/Content/LevelPrototyping/Meshes/SM_QuarterCylinder.uasset",
+				"F:/SpiderManUE5/SpiderMan/Content/LevelPrototyping/Interactable/Target/Assets/SM_TargetBaseMesh.uasset",
+				"F:/SpiderManUE5/SpiderMan/Content/LevelPrototyping/Interactable/JumpPad/Assets/Meshes/SM_CircularBand.uasset",
+				"F:/SpiderManUE5/SpiderMan/Content/LevelPrototyping/Interactable/JumpPad/Assets/Meshes/SM_CircularGlow.uasset",
+				"F:/SpiderManUE5/SpiderMan/Content/LevelPrototyping/Interactable/Door/Assets/Meshes/SM_Door.uasset",
+				"F:/SpiderManUE5/SpiderMan/Content/LevelPrototyping/Interactable/Door/Assets/Meshes/SM_DoorFrame_Corner.uasset",
+				"F:/SpiderManUE5/SpiderMan/Content/LevelPrototyping/Interactable/Door/Assets/Meshes/SM_DoorFrame_Edge.uasset",
+				"F:/SpiderManUE5/SpiderMan/Content/Core/Blueprint/Character/BP_SMCharacter.uasset",
+				"F:/SpiderManUE5/SpiderMan/Content/ThirdPerson/Blueprints/BP_ThirdPersonGameMode.uasset",
+				"F:/SpiderManUE5/SpiderMan/Content/Core/Blueprint/Character/BP_SMController.uasset",
+				"F:/SpiderManUE5/SpiderMan/Content/Core/Input/IMC_SpiderMan.uasset",
+				"F:/SpiderManUE5/SpiderMan/Content/Core/Input/IA_Walk.uasset",
+				"F:/SpiderManUE5/SpiderMan/Content/Core/Input/IA_Forward_Backward.uasset",
+				"F:/SpiderManUE5/SpiderMan/Content/Core/Input/IA_Left_Right.uasset",
+				"F:/SpiderManUE5/SpiderMan/Content/Core/Input/Actions/IA_Left_Right.uasset",
+				"F:/SpiderManUE5/SpiderMan/Content/Core/Input/Actions/IA_Forward_Backward.uasset",
+				"F:/SpiderManUE5/SpiderMan/Content/Core/Input/Actions/IA_Jump.uasset"
+			]
+		}
+	]
+}

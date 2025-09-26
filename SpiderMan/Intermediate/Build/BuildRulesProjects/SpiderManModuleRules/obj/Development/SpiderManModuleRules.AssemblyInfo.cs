@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SpiderManModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8393ce53c76d8e470435efb568c29c796ffeb73")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e58888e64d0b0379da593abf0034e7171a0d9db")]
 [assembly: System.Reflection.AssemblyProductAttribute("SpiderManModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SpiderManModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

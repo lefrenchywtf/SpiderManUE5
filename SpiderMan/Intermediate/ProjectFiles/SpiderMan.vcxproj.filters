@@ -11,6 +11,7 @@
     <None Include="..\..\Source\SpiderManEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -29,6 +30,18 @@
     <Filter Include="Source\SpiderMan">
       <UniqueIdentifier>{B894AEB1-A904-3805-A4C6-0877C2B5E59A}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\SpiderMan\SMCharacter.cpp">
+      <Filter>Source\SpiderMan</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SpiderMan\SMCharacter.h">
+      <Filter>Source\SpiderMan</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SpiderMan\SMController.cpp">
+      <Filter>Source\SpiderMan</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SpiderMan\SMController.h">
+      <Filter>Source\SpiderMan</Filter>
+    </ClInclude>
     <None Include="..\..\Source\SpiderMan\SpiderMan.Build.cs">
       <Filter>Source\SpiderMan</Filter>
     </None>

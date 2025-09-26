@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "f:\\spidermanue5\\spiderman\\intermediate\\build\\win64\\unrealeditor\\inc\\spiderman\\uht\\spiderman.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "f:\\spidermanue5\\spiderman\\intermediate\\build\\win64\\x64\\spidermaneditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "f:\\spidermanue5\\spiderman\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\spiderman\\definitions.spiderman.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,240 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+#include "UObject/GeneratedCppIncludes.h"
+#include "SpiderMan/SMCharacter.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
+void EmptyLinkFunctionForGeneratedCodeSMCharacter() {}
+
+// ********** Begin Cross Module References ********************************************************
+ENGINE_API UClass* Z_Construct_UClass_ACharacter();
+SPIDERMAN_API UClass* Z_Construct_UClass_ASMCharacter();
+SPIDERMAN_API UClass* Z_Construct_UClass_ASMCharacter_NoRegister();
+UPackage* Z_Construct_UPackage__Script_SpiderMan();
+// ********** End Cross Module References **********************************************************
+
+// ********** Begin Class ASMCharacter Function JumpChara ******************************************
+struct Z_Construct_UFunction_ASMCharacter_JumpChara_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "SMCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASMCharacter_JumpChara_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ASMCharacter, nullptr, "JumpChara", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASMCharacter_JumpChara_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASMCharacter_JumpChara_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_ASMCharacter_JumpChara()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASMCharacter_JumpChara_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ASMCharacter::execJumpChara)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->JumpChara();
+	P_NATIVE_END;
+}
+// ********** End Class ASMCharacter Function JumpChara ********************************************
+
+// ********** Begin Class ASMCharacter Function MoveForward ****************************************
+struct Z_Construct_UFunction_ASMCharacter_MoveForward_Statics
+{
+	struct SMCharacter_eventMoveForward_Parms
+	{
+		float _value;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "SMCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp__value;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ASMCharacter_MoveForward_Statics::NewProp__value = { "_value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SMCharacter_eventMoveForward_Parms, _value), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ASMCharacter_MoveForward_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASMCharacter_MoveForward_Statics::NewProp__value,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ASMCharacter_MoveForward_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASMCharacter_MoveForward_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ASMCharacter, nullptr, "MoveForward", Z_Construct_UFunction_ASMCharacter_MoveForward_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ASMCharacter_MoveForward_Statics::PropPointers), sizeof(Z_Construct_UFunction_ASMCharacter_MoveForward_Statics::SMCharacter_eventMoveForward_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASMCharacter_MoveForward_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASMCharacter_MoveForward_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_ASMCharacter_MoveForward_Statics::SMCharacter_eventMoveForward_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ASMCharacter_MoveForward()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASMCharacter_MoveForward_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ASMCharacter::execMoveForward)
+{
+	P_GET_PROPERTY(FFloatProperty,Z_Param__value);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->MoveForward(Z_Param__value);
+	P_NATIVE_END;
+}
+// ********** End Class ASMCharacter Function MoveForward ******************************************
+
+// ********** Begin Class ASMCharacter Function MoveSide *******************************************
+struct Z_Construct_UFunction_ASMCharacter_MoveSide_Statics
+{
+	struct SMCharacter_eventMoveSide_Parms
+	{
+		float _value;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "SMCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp__value;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ASMCharacter_MoveSide_Statics::NewProp__value = { "_value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SMCharacter_eventMoveSide_Parms, _value), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ASMCharacter_MoveSide_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASMCharacter_MoveSide_Statics::NewProp__value,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ASMCharacter_MoveSide_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASMCharacter_MoveSide_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ASMCharacter, nullptr, "MoveSide", Z_Construct_UFunction_ASMCharacter_MoveSide_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ASMCharacter_MoveSide_Statics::PropPointers), sizeof(Z_Construct_UFunction_ASMCharacter_MoveSide_Statics::SMCharacter_eventMoveSide_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASMCharacter_MoveSide_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASMCharacter_MoveSide_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_ASMCharacter_MoveSide_Statics::SMCharacter_eventMoveSide_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ASMCharacter_MoveSide()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASMCharacter_MoveSide_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ASMCharacter::execMoveSide)
+{
+	P_GET_PROPERTY(FFloatProperty,Z_Param__value);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->MoveSide(Z_Param__value);
+	P_NATIVE_END;
+}
+// ********** End Class ASMCharacter Function MoveSide *********************************************
+
+// ********** Begin Class ASMCharacter *************************************************************
+void ASMCharacter::StaticRegisterNativesASMCharacter()
+{
+	UClass* Class = ASMCharacter::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "JumpChara", &ASMCharacter::execJumpChara },
+		{ "MoveForward", &ASMCharacter::execMoveForward },
+		{ "MoveSide", &ASMCharacter::execMoveSide },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+}
+FClassRegistrationInfo Z_Registration_Info_UClass_ASMCharacter;
+UClass* ASMCharacter::GetPrivateStaticClass()
+{
+	using TClass = ASMCharacter;
+	if (!Z_Registration_Info_UClass_ASMCharacter.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("SMCharacter"),
+			Z_Registration_Info_UClass_ASMCharacter.InnerSingleton,
+			StaticRegisterNativesASMCharacter,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_ASMCharacter.InnerSingleton;
+}
+UClass* Z_Construct_UClass_ASMCharacter_NoRegister()
+{
+	return ASMCharacter::GetPrivateStaticClass();
+}
+struct Z_Construct_UClass_ASMCharacter_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+		{ "HideCategories", "Navigation" },
+		{ "IncludePath", "SMCharacter.h" },
+		{ "ModuleRelativePath", "SMCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ASMCharacter_JumpChara, "JumpChara" }, // 2201523530
+		{ &Z_Construct_UFunction_ASMCharacter_MoveForward, "MoveForward" }, // 853781188
+		{ &Z_Construct_UFunction_ASMCharacter_MoveSide, "MoveSide" }, // 3705454484
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
+	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
+		TCppClassTypeTraits<ASMCharacter>::IsAbstract,
+	};
+	static const UECodeGen_Private::FClassParams ClassParams;
+};
+UObject* (*const Z_Construct_UClass_ASMCharacter_Statics::DependentSingletons[])() = {
+	(UObject* (*)())Z_Construct_UClass_ACharacter,
+	(UObject* (*)())Z_Construct_UPackage__Script_SpiderMan,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASMCharacter_Statics::DependentSingletons) < 16);
+const UECodeGen_Private::FClassParams Z_Construct_UClass_ASMCharacter_Statics::ClassParams = {
+	&ASMCharacter::StaticClass,
+	"Game",
+	&StaticCppClassTypeInfo,
+	DependentSingletons,
+	FuncInfo,
+	nullptr,
+	nullptr,
+	UE_ARRAY_COUNT(DependentSingletons),
+	UE_ARRAY_COUNT(FuncInfo),
+	0,
+	0,
+	0x009001A4u,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ASMCharacter_Statics::Class_MetaDataParams), Z_Construct_UClass_ASMCharacter_Statics::Class_MetaDataParams)
+};
+UClass* Z_Construct_UClass_ASMCharacter()
+{
+	if (!Z_Registration_Info_UClass_ASMCharacter.OuterSingleton)
+	{
+		UECodeGen_Private::ConstructUClass(Z_Registration_Info_UClass_ASMCharacter.OuterSingleton, Z_Construct_UClass_ASMCharacter_Statics::ClassParams);
+	}
+	return Z_Registration_Info_UClass_ASMCharacter.OuterSingleton;
+}
+DEFINE_VTABLE_PTR_HELPER_CTOR(ASMCharacter);
+ASMCharacter::~ASMCharacter() {}
+// ********** End Class ASMCharacter ***************************************************************
+
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_SpiderMan_Source_SpiderMan_SMCharacter_h__Script_SpiderMan_Statics
+{
+	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
+		{ Z_Construct_UClass_ASMCharacter, ASMCharacter::StaticClass, TEXT("ASMCharacter"), &Z_Registration_Info_UClass_ASMCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASMCharacter), 1207049050U) },
+	};
+};
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_SpiderMan_Source_SpiderMan_SMCharacter_h__Script_SpiderMan_1813225988(TEXT("/Script/SpiderMan"),
+	Z_CompiledInDeferFile_FID_SpiderMan_Source_SpiderMan_SMCharacter_h__Script_SpiderMan_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_SpiderMan_Source_SpiderMan_SMCharacter_h__Script_SpiderMan_Statics::ClassInfo),
+	nullptr, 0,
+	nullptr, 0);
+// ********** End Registration *********************************************************************
+
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
