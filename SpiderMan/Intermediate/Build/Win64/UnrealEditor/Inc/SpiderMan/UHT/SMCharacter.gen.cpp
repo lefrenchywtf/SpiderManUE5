@@ -20,6 +20,73 @@ SPIDERMAN_API UClass* Z_Construct_UClass_ASMCharacter_NoRegister();
 UPackage* Z_Construct_UPackage__Script_SpiderMan();
 // ********** End Cross Module References **********************************************************
 
+// ********** Begin Class ASMCharacter Function IsFalling ******************************************
+struct SMCharacter_eventIsFalling_Parms
+{
+	bool ReturnValue;
+
+	/** Constructor, initializes return property only **/
+	SMCharacter_eventIsFalling_Parms()
+		: ReturnValue(false)
+	{
+	}
+};
+static FName NAME_ASMCharacter_IsFalling = FName(TEXT("IsFalling"));
+bool ASMCharacter::IsFalling()
+{
+	UFunction* Func = FindFunctionChecked(NAME_ASMCharacter_IsFalling);
+	if (!Func->GetOwnerClass()->HasAnyClassFlags(CLASS_Native))
+	{
+		SMCharacter_eventIsFalling_Parms Parms;
+	ProcessEvent(Func,&Parms);
+		return !!Parms.ReturnValue;
+	}
+	else
+	{
+		return IsFalling_Implementation();
+	}
+}
+struct Z_Construct_UFunction_ASMCharacter_IsFalling_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "SMCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_ReturnValue_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_ASMCharacter_IsFalling_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+{
+	((SMCharacter_eventIsFalling_Parms*)Obj)->ReturnValue = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ASMCharacter_IsFalling_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(SMCharacter_eventIsFalling_Parms), &Z_Construct_UFunction_ASMCharacter_IsFalling_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ASMCharacter_IsFalling_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASMCharacter_IsFalling_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ASMCharacter_IsFalling_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASMCharacter_IsFalling_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ASMCharacter, nullptr, "IsFalling", Z_Construct_UFunction_ASMCharacter_IsFalling_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ASMCharacter_IsFalling_Statics::PropPointers), sizeof(SMCharacter_eventIsFalling_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASMCharacter_IsFalling_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASMCharacter_IsFalling_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(SMCharacter_eventIsFalling_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ASMCharacter_IsFalling()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASMCharacter_IsFalling_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ASMCharacter::execIsFalling)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsFalling_Implementation();
+	P_NATIVE_END;
+}
+// ********** End Class ASMCharacter Function IsFalling ********************************************
+
 // ********** Begin Class ASMCharacter Function JumpChara ******************************************
 struct Z_Construct_UFunction_ASMCharacter_JumpChara_Statics
 {
@@ -175,15 +242,76 @@ DEFINE_FUNCTION(ASMCharacter::execMoveSide)
 }
 // ********** End Class ASMCharacter Function MoveSide *********************************************
 
+// ********** Begin Class ASMCharacter Function StartWebswing **************************************
+struct Z_Construct_UFunction_ASMCharacter_StartWebswing_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "SMCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASMCharacter_StartWebswing_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ASMCharacter, nullptr, "StartWebswing", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASMCharacter_StartWebswing_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASMCharacter_StartWebswing_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_ASMCharacter_StartWebswing()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASMCharacter_StartWebswing_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ASMCharacter::execStartWebswing)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StartWebswing();
+	P_NATIVE_END;
+}
+// ********** End Class ASMCharacter Function StartWebswing ****************************************
+
+// ********** Begin Class ASMCharacter Function StopSwinging ***************************************
+struct Z_Construct_UFunction_ASMCharacter_StopSwinging_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "SMCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASMCharacter_StopSwinging_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ASMCharacter, nullptr, "StopSwinging", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASMCharacter_StopSwinging_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASMCharacter_StopSwinging_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_ASMCharacter_StopSwinging()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASMCharacter_StopSwinging_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ASMCharacter::execStopSwinging)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StopSwinging();
+	P_NATIVE_END;
+}
+// ********** End Class ASMCharacter Function StopSwinging *****************************************
+
 // ********** Begin Class ASMCharacter *************************************************************
 void ASMCharacter::StaticRegisterNativesASMCharacter()
 {
 	UClass* Class = ASMCharacter::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "IsFalling", &ASMCharacter::execIsFalling },
 		{ "JumpChara", &ASMCharacter::execJumpChara },
 		{ "Look", &ASMCharacter::execLook },
 		{ "MoveForward", &ASMCharacter::execMoveForward },
 		{ "MoveSide", &ASMCharacter::execMoveSide },
+		{ "StartWebswing", &ASMCharacter::execStartWebswing },
+		{ "StopSwinging", &ASMCharacter::execStopSwinging },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -229,15 +357,24 @@ struct Z_Construct_UClass_ASMCharacter_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "SMCharacter.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_IsSwinging_MetaData[] = {
+		{ "Category", "SMCharacter" },
+		{ "ModuleRelativePath", "SMCharacter.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraComponent;
+	static void NewProp_IsSwinging_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_IsSwinging;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ASMCharacter_IsFalling, "IsFalling" }, // 774807509
 		{ &Z_Construct_UFunction_ASMCharacter_JumpChara, "JumpChara" }, // 2201523530
 		{ &Z_Construct_UFunction_ASMCharacter_Look, "Look" }, // 2049674458
 		{ &Z_Construct_UFunction_ASMCharacter_MoveForward, "MoveForward" }, // 853781188
 		{ &Z_Construct_UFunction_ASMCharacter_MoveSide, "MoveSide" }, // 3705454484
+		{ &Z_Construct_UFunction_ASMCharacter_StartWebswing, "StartWebswing" }, // 1682517602
+		{ &Z_Construct_UFunction_ASMCharacter_StopSwinging, "StopSwinging" }, // 534551210
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -246,8 +383,14 @@ struct Z_Construct_UClass_ASMCharacter_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASMCharacter_Statics::NewProp_CameraComponent = { "CameraComponent", nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASMCharacter, CameraComponent), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CameraComponent_MetaData), NewProp_CameraComponent_MetaData) };
+void Z_Construct_UClass_ASMCharacter_Statics::NewProp_IsSwinging_SetBit(void* Obj)
+{
+	((ASMCharacter*)Obj)->IsSwinging = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ASMCharacter_Statics::NewProp_IsSwinging = { "IsSwinging", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ASMCharacter), &Z_Construct_UClass_ASMCharacter_Statics::NewProp_IsSwinging_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_IsSwinging_MetaData), NewProp_IsSwinging_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASMCharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASMCharacter_Statics::NewProp_CameraComponent,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASMCharacter_Statics::NewProp_IsSwinging,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASMCharacter_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ASMCharacter_Statics::DependentSingletons[])() = {
@@ -286,10 +429,10 @@ ASMCharacter::~ASMCharacter() {}
 struct Z_CompiledInDeferFile_FID_SpiderMan_Source_SpiderMan_SMCharacter_h__Script_SpiderMan_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASMCharacter, ASMCharacter::StaticClass, TEXT("ASMCharacter"), &Z_Registration_Info_UClass_ASMCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASMCharacter), 1461846230U) },
+		{ Z_Construct_UClass_ASMCharacter, ASMCharacter::StaticClass, TEXT("ASMCharacter"), &Z_Registration_Info_UClass_ASMCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASMCharacter), 2183701666U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_SpiderMan_Source_SpiderMan_SMCharacter_h__Script_SpiderMan_2194600260(TEXT("/Script/SpiderMan"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_SpiderMan_Source_SpiderMan_SMCharacter_h__Script_SpiderMan_2245958941(TEXT("/Script/SpiderMan"),
 	Z_CompiledInDeferFile_FID_SpiderMan_Source_SpiderMan_SMCharacter_h__Script_SpiderMan_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_SpiderMan_Source_SpiderMan_SMCharacter_h__Script_SpiderMan_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

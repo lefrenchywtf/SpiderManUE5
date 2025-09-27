@@ -72,3 +72,48 @@ void ASMCharacter::Look(FVector2D _inputs)
 	AddControllerYawInput(_inputs.X);
 	AddControllerPitchInput(_inputs.Y);
 }
+
+void ASMCharacter::StartWebswing()
+{
+	if (!IsSwinging && IsFalling())
+	{
+		FVector Start = GetActorLocation();
+		FVector End = Start + GetActorForwardVector() * 10000.0f;
+		float Radius = 1000.0f;
+		TArray<FHitResult> HitResults;
+		FCollisionQueryParams TraceParams;
+		TraceParams.AddIgnoredActor(this);
+
+		if (GetWorld()->SweepMultiByChannel(
+			HitResults,
+			Start,
+			End,
+			FQuat::Identity,
+			ECC_Visibility,
+			FCollisionShape::MakeSphere(Radius),
+			TraceParams
+		))
+		{
+			UE_LOG(LogTemp, Warning, TEXT("%d"), HitResults.Num());
+			for (FHitResult hit : HitResults)
+			{
+				if (true)//hit.ImpactPoint.Z > Start.Z)
+				{
+					IsSwinging = true;
+					UE_LOG(LogTemp, Warning, TEXT("%s"), *hit.ImpactPoint.ToString());
+					DrawDebugSphere(GetWorld(), hit.ImpactPoint, 50, 10, FColor::Red, true);
+				}
+			}
+		}
+	}
+}
+
+void ASMCharacter::StopSwinging()
+{
+	IsSwinging = false;
+}
+
+bool ASMCharacter::IsFalling_Implementation()
+{
+	return false;
+}

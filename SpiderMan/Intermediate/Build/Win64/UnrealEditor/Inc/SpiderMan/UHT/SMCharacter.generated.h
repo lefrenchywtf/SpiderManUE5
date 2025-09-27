@@ -18,12 +18,17 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class ASMCharacter *************************************************************
 #define FID_SpiderMan_Source_SpiderMan_SMCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual bool IsFalling_Implementation(); \
+	DECLARE_FUNCTION(execIsFalling); \
+	DECLARE_FUNCTION(execStopSwinging); \
+	DECLARE_FUNCTION(execStartWebswing); \
 	DECLARE_FUNCTION(execLook); \
 	DECLARE_FUNCTION(execJumpChara); \
 	DECLARE_FUNCTION(execMoveSide); \
 	DECLARE_FUNCTION(execMoveForward);
 
 
+#define FID_SpiderMan_Source_SpiderMan_SMCharacter_h_12_CALLBACK_WRAPPERS
 SPIDERMAN_API UClass* Z_Construct_UClass_ASMCharacter_NoRegister();
 
 #define FID_SpiderMan_Source_SpiderMan_SMCharacter_h_12_INCLASS_NO_PURE_DECLS \
@@ -52,6 +57,7 @@ public: \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	FID_SpiderMan_Source_SpiderMan_SMCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_SpiderMan_Source_SpiderMan_SMCharacter_h_12_CALLBACK_WRAPPERS \
 	FID_SpiderMan_Source_SpiderMan_SMCharacter_h_12_INCLASS_NO_PURE_DECLS \
 	FID_SpiderMan_Source_SpiderMan_SMCharacter_h_12_ENHANCED_CONSTRUCTORS \
 private: \

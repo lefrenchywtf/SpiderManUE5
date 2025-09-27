@@ -21,6 +21,9 @@ protected:
 
 	UPROPERTY(BlueprintReadWrite);
 	class UCameraComponent* CameraComponent;
+
+	UPROPERTY(BlueprintReadWrite)
+	bool IsSwinging = false;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -39,4 +42,13 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void Look(FVector2D _inputs);
+
+	UFUNCTION(BlueprintCallable)
+	void StartWebswing();
+
+	UFUNCTION(BlueprintCallable)
+	void StopSwinging();
+
+	UFUNCTION(BlueprintNativeEvent)
+	bool IsFalling();
 };
